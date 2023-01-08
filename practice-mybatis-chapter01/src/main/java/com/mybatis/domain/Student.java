@@ -14,6 +14,9 @@ public class Student {
 	private String email;
 	private Date dob;
 	
+	public Student() {
+	}
+	
 	public Student(Integer studId) {
 		this.studId = studId;
 	}
@@ -30,4 +33,6 @@ public class Student {
 		return "Student [studId=" + studId + ", name=" + name + ", email="
 				+ email + ", dob=" + dob + "]";
 	}
+
+	
 }

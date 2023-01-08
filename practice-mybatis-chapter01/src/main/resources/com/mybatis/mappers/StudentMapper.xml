@@ -15,4 +15,11 @@
 		select stud_id as studId, name, email, dob from Students where stud_id=#{studId}
 	</select>
 	
+	<select id="findAllStudents" resultMap="StudentResult">
+		SELECT * FROM STUDENTS
+	</select>
+	
+	<insert id="insertStudent" parameterType="Student">
+		INSERT INTO STUDENTS(STUD_ID,NAME,EMAIL,DOB) VALUES(#{studId },#{name},#{email},#{dob})
+	</insert>
 </mapper>

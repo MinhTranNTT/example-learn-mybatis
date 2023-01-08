@@ -22,7 +22,7 @@ public class MyBatisSqlSessionFactory {
 			InputStream is = DataSourceFactory.class.getResourceAsStream("/application.properties");
 			PROPERTIES.load(is);
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	
@@ -33,7 +33,7 @@ public class MyBatisSqlSessionFactory {
 				inputStream = Resources.getResourceAsStream("mybatis-config.xml");
 				sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 			} catch (IOException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 				//throw new RuntimeException(); 
 			} finally {
 				if (inputStream != null) {
